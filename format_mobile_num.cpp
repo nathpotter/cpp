@@ -9,6 +9,11 @@ bool isMobileNumber(const string &number) {
     if (number.length() != 10) {
         return false;
     }
+
+    if (number.substr(0, 2) != "06" || number.substr(0, 2) != "08" || number.substr(0, 2) != "09")
+    {
+        return false;
+    }
     
     // Check if all characters are digits
     for (char c : number) {
