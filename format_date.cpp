@@ -12,21 +12,33 @@ int main() {
     };
 
     string inputDate;
-    cout << "Enter a date in the format DD/MM/YYYY: ";
+    cout << "Enter a date in the format DD/MM/YYYY (q - quit): ";
     cin >> inputDate;
 
-    string day, month, year;
-    stringstream ss(inputDate);
-    getline(ss, day, '/');
-    getline(ss, month, '/');
-    getline(ss, year);
+    while (inputDate != "q" || inputDate != "Q")
+    {
+        /* code */
 
-    if (monthMap.find(month) == monthMap.end()) {
-        cout << "Invalid month input." << endl;
-        return 1;
+        string day, month, year;
+        stringstream ss(inputDate);
+        getline(ss, day, '/');
+        getline(ss, month, '/');
+        getline(ss, year);
+
+        if (inputDate == "q" || inputDate == "Q")
+        {
+            /* code */
+            return 0;
+        } else if (monthMap.find(month) == monthMap.end()) {
+            cout << "Invalid month input." << endl;
+            // return 1;
+        } else {
+            cout << monthMap[month] << " " << day << ", " << year << endl;
+        }
+
+        cout << "Enter a date in the format DD/MM/YYYY (q - quit): ";
+        cin >> inputDate;
     }
-
-    cout << monthMap[month] << " " << day << ", " << year << endl;
 
     return 0;
 }
