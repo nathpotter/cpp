@@ -11,21 +11,25 @@ int main() {
     
     // Loop through the string and replace '(' with '['
     for (char &c : inputString) {
-        if (c == '(') {
+        cout << "Character: " << c <<endl;
+        switch (c) {
+        case '(':
             c = '[';
-        }
-        
-        if (c == ')') {
+            break;
+        case ')':
             c = ']';
-        }
-
-        if (c == '[') {
+            break;
+        case '[':
             c = '(';
-        }
-        
-        if (c == ']') {
+            break;
+        case ']':
             c = ')';
-        }
+            break;
+        default:
+            // operator is doesn't match any case constant (+, -, *, /)
+            // cout << "Error! The operator is not correct";
+            break;
+    }
     }
     
     // Print the modified string
