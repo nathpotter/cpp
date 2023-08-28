@@ -11,13 +11,12 @@ int main() {
     cout << "Enter two numbers (M and N): ";
     cin >> M >> N;
 
-
     if( M > N){
         cout << "M > N: please input M < N" << endl;
 
     }else
     {
-        cout << "M < N" << endl;
+        // cout << "M < N" << endl;
         
         int count = 0;
         string long_to_string;
@@ -31,9 +30,21 @@ int main() {
 
         count = long_to_string.length();
         result = count;
+        cout << "Count of numbers between " << M << " and " << N << ": " << result << endl;
     }
     
-    cout << "Count of numbers between " << M << " and " << N << ": " << result << endl;
+
+    // if (M > N) {
+    //     cout << "M > N: please input M < N" << endl;
+    //     return 1;
+    // } else {
+    //     cout << "M < N" << endl;
+
+    //     long long count = N - M + 1;
+    //     int result = static_cast<int>(log10(count) + 1);
+
+    //     cout << "Count of numbers between " << M << " and " << N << ": " << result << endl;
+    // }
     
     return 0;
 }
