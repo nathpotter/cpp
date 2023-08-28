@@ -30,7 +30,7 @@ int main() {
         if (charCounts[c] != 0)
         {
             /* code */
-            cout << c << ": " << charCounts[c] << endl;
+            cout << c << "-> " << charCounts[c] << endl;
         }
         
     }
